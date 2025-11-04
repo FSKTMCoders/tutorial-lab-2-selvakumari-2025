@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class CarLoanPayment {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter price of the car (P): ");
+        double P = input.nextDouble();
+
+        System.out.print("Enter down payment (D): ");
+        double D = input.nextDouble();
+
+        System.out.print("Enter interest rate (%) (R): ");
+        double R = input.nextDouble();
+
+        System.out.print("Enter loan duration (years) (Y): ");
+        int Y = input.nextInt();
+
+        double M = (P - D) * (1 + R * Y / 100) / (Y * 12);
+        System.out.printf("Monthly Payment: %.2f%n", M);
+    }
+}
