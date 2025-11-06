@@ -1,0 +1,17 @@
+import java.util.Random;
+
+public class RandomNumbers {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int num1 = rand.nextInt(41) + 10; // 10–50
+        int num2 = rand.nextInt(41) + 10;
+        int num3 = rand.nextInt(41) + 10;
+
+        int sum = num1 + num2 + num3;
+        double average = sum / 3.0;
+
+        System.out.println("Random Numbers: " + num1 + ", " + num2 + ", " + num3);
+        System.out.println("Sum: " + sum);
+        System.out.printf("Average: %.2f%n", average);
+    }
+}
